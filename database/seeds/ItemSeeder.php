@@ -15,11 +15,11 @@ class ItemSeeder extends Seeder
     public function run()
     {
         $faker = Faker::create();
-        foreach (range(1, 3) as $index) {
+        foreach (range(1, 5) as $index) {
             DB::table('items')->insert([
                 'name' => $faker->word,
                 'urgency' => '1',
-                'checklist_id' => '3',
+                'checklist_id' => '1',
                 'description' => $faker->paragraph,
                 'updated_at' => Carbon::now(),
                 'created_at' => Carbon::now()

@@ -84,7 +84,7 @@ class ItemTest extends TestCase
         // Disable middleware basic auth
         $this->app->instance('middleware.disable', true);
 
-        $this->get('checklists/1/items/3', [], []);
+        $this->get('checklists/1/items/1', [], []);
         $this->seeStatusCode(200);
         $this->seeJsonStructure([
                 'data' => [
@@ -109,7 +109,7 @@ class ItemTest extends TestCase
         // Disable middleware basic auth
         $this->app->instance('middleware.disable', true);
 
-        $this->patch('checklists/1/items/3', [], []);
+        $this->patch('checklists/1/items/2', [], []);
         $this->seeStatusCode(200);
         $this->seeJson(
             ['status' => 'The item data from checklist successfuly edited!']
